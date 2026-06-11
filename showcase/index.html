@@ -333,32 +333,32 @@ df = ds[<span class="str">"train"</span>].to_pandas()
     <div class="plots-grid plots-grid-3">
       <div class="plot-card">
         <div class="plot-label">Age & Gender Distribution</div>
-        <img src="../results/plots/age_gender_dist.png" alt="Age and gender distribution of patients" loading="lazy" />
+        <img src="plots/age_gender_dist.png" alt="Age and gender distribution of patients" loading="lazy" />
         <div class="plot-caption">Demographic spread across the 99,992-patient cohort. Both male and female patients span all age groups (17–105), enabling demographic-aware clustering.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Tests Per Patient</div>
-        <img src="../results/plots/tests_per_patient.png" alt="Number of tests per patient histogram" loading="lazy" />
+        <img src="plots/tests_per_patient.png" alt="Number of tests per patient histogram" loading="lazy" />
         <div class="plot-caption">Distribution of how many lab tests each patient had done. Heavy right skew — most patients have 5–20 tests, with outliers having 50+.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Top 20 Most Common Tests</div>
-        <img src="../results/plots/top20_tests.png" alt="Top 20 most frequent lab tests" loading="lazy" />
+        <img src="plots/top20_tests.png" alt="Top 20 most frequent lab tests" loading="lazy" />
         <div class="plot-caption">Hemoglobin, RBC Count, and Platelet Count dominate — confirming CBC panels as the most common diagnostic workup in the Indian PHR dataset.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Specimen Type Distribution</div>
-        <img src="../results/plots/specimen_distribution.png" alt="Specimen types" loading="lazy" />
+        <img src="plots/specimen_distribution.png" alt="Specimen types" loading="lazy" />
         <div class="plot-caption">Venous blood (serum) dominates specimen collection. Urine and EDTA-blood specimens represent secondary sources for renal and CBC panels respectively.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Missing Value Heatmap</div>
-        <img src="../results/plots/missing_heatmap.png" alt="Missing value heatmap across the dataset" loading="lazy" />
+        <img src="plots/missing_heatmap.png" alt="Missing value heatmap across the dataset" loading="lazy" />
         <div class="plot-caption">Missingness density across all 109 columns. Rare tests like Iron, Vitamin B12, and TSH show 80%+ missingness — motivating missingness indicator features.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Unit Inconsistency Analysis</div>
-        <img src="../results/plots/unit_inconsistency.png" alt="Unit inconsistency across test measurements" loading="lazy" />
+        <img src="plots/unit_inconsistency.png" alt="Unit inconsistency across test measurements" loading="lazy" />
         <div class="plot-caption">Different Indian labs report identical tests in different units (e.g., mg/dL vs mmol/L). Detected and corrected via LOINC-based standardization.</div>
       </div>
     </div>
@@ -366,12 +366,12 @@ df = ds[<span class="str">"train"</span>].to_pandas()
     <div class="plots-grid plots-grid-2" style="margin-top: 2rem;">
       <div class="plot-card">
         <div class="plot-label">Reference Range Patterns</div>
-        <img src="../results/plots/display_ranges_patterns.png" alt="Display range patterns from Indian labs" loading="lazy" />
+        <img src="plots/display_ranges_patterns.png" alt="Display range patterns from Indian labs" loading="lazy" />
         <div class="plot-caption">Lab-reported reference ranges from Indian diagnostic facilities. These real-world ranges, not WHO/ICMR standards, form the backbone of our novelty — we learn what <em>Indian labs</em> consider normal.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Imputation Heatmap</div>
-        <img src="../results/plots/imputation_heatmap.png" alt="Imputation results heatmap" loading="lazy" />
+        <img src="plots/imputation_heatmap.png" alt="Imputation results heatmap" loading="lazy" />
         <div class="plot-caption">KNN imputation effectively fills sparse biomarkers using correlated neighbors. The before/after pattern confirms imputed values fall within physiologically plausible ranges.</div>
       </div>
     </div>
@@ -455,36 +455,36 @@ df = ds[<span class="str">"train"</span>].to_pandas()
     <div class="plots-grid plots-grid-2">
       <div class="plot-card">
         <div class="plot-label">K Selection — Elbow + Silhouette</div>
-        <img src="../results/plots/clustering_selection.png" alt="K-Means cluster selection using elbow method" loading="lazy" />
+        <img src="plots/clustering_selection.png" alt="K-Means cluster selection using elbow method" loading="lazy" />
         <div class="plot-caption">Inertia decreases as k increases (elbow curve), while silhouette peaks at k=5. Davies-Bouldin index reaches its minimum (2.77) confirming k=5 as the optimal choice.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">PCA Scree Plot</div>
-        <img src="../results/plots/pca_scree.png" alt="PCA scree plot showing variance explained" loading="lazy" />
+        <img src="plots/pca_scree.png" alt="PCA scree plot showing variance explained" loading="lazy" />
         <div class="plot-caption">Cumulative explained variance curve. 55 principal components capture 95% of total variance from the original 109 medical features, enabling efficient clustering without losing clinical signal.</div>
       </div>
     </div>
 
     <div class="plot-card plot-card-wide">
       <div class="plot-label">t-SNE Visualization — Clusters · Age · Gender</div>
-      <img src="../results/plots/tsne_clusters.png" alt="t-SNE visualization of patient clusters by cluster, age group, and gender" loading="lazy" />
+      <img src="plots/tsne_clusters.png" alt="t-SNE visualization of patient clusters by cluster, age group, and gender" loading="lazy" />
       <div class="plot-caption">3,000-patient subsample projected via t-SNE into 2D. Left panel: 5 cluster assignments. Center: age group stratification (viridis). Right: gender distribution (blue=Male, coral=Female). Clusters reflect real biological groupings — not simply age or gender splits.</div>
     </div>
 
     <div class="plots-grid plots-grid-3" style="margin-top: 1.5rem;">
       <div class="plot-card">
         <div class="plot-label">Bootstrap Stability (ARI)</div>
-        <img src="../results/plots/bootstrap_ari.png" alt="Bootstrap ARI distribution for cluster stability" loading="lazy" />
+        <img src="plots/bootstrap_ari.png" alt="Bootstrap ARI distribution for cluster stability" loading="lazy" />
         <div class="plot-caption">Adjusted Rand Index across 100 bootstrap resamples. Consistent ARI confirms the 5-cluster solution is stable, not an artifact of a single random initialization.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Cluster Feature Importance</div>
-        <img src="../results/plots/cluster_feature_importance.png" alt="Features driving cluster assignments" loading="lazy" />
+        <img src="plots/cluster_feature_importance.png" alt="Features driving cluster assignments" loading="lazy" />
         <div class="plot-caption">Top biomarkers explaining between-cluster variance. Hemoglobin, RBC Count, and MCHC dominate — indicating anaemia-related profiles drive the strongest cohort separation.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Cluster Missingness Patterns</div>
-        <img src="../results/plots/verified_cluster_missingness.png" alt="Missing value patterns per cluster" loading="lazy" />
+        <img src="plots/verified_cluster_missingness.png" alt="Missing value patterns per cluster" loading="lazy" />
         <div class="plot-caption">Verified missingness rates across clusters reveal that small clusters (0, 4) have systematically different test coverage — patients with rare or extreme profiles also tend to have more complete workups.</div>
       </div>
     </div>
@@ -562,7 +562,7 @@ df = ds[<span class="str">"train"</span>].to_pandas()
 
       <div class="plot-card" style="margin-top: 1.5rem;">
         <div class="plot-label">Novelty Validation — Cluster vs Global Thresholds</div>
-        <img src="../results/plots/06_novelty_validation.png" alt="Cluster threshold vs global threshold divergence validation" loading="lazy" />
+        <img src="plots/06_novelty_validation.png" alt="Cluster threshold vs global threshold divergence validation" loading="lazy" />
         <div class="plot-caption">Per-biomarker divergence analysis comparing cluster-adaptive thresholds against global population norms. Red regions indicate where a global threshold would incorrectly classify patients as normal/abnormal — demonstrating the clinical need for cohort-specific ranges.</div>
       </div>
     </div>
@@ -665,12 +665,12 @@ df = ds[<span class="str">"train"</span>].to_pandas()
     <div class="plots-grid plots-grid-2">
       <div class="plot-card">
         <div class="plot-label">Confusion Matrices — All Labels</div>
-        <img src="../results/plots/04_confusion_matrices.png" alt="Confusion matrices for baseline models" loading="lazy" />
+        <img src="plots/04_confusion_matrices.png" alt="Confusion matrices for baseline models" loading="lazy" />
         <div class="plot-caption">Confusion matrices for RF_base across all 6 labels. True positives are strong for Liver Stress and Thyroid Abnormal; Diabetes Risk shows the most false negatives due to severe class imbalance (8.18% positive rate).</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Precision-Recall Curves — Baseline</div>
-        <img src="../results/plots/04_pr_curves.png" alt="Precision-Recall curves for baseline models" loading="lazy" />
+        <img src="plots/04_pr_curves.png" alt="Precision-Recall curves for baseline models" loading="lazy" />
         <div class="plot-caption">PR curves for all 4 baseline models across all labels. Random Forest consistently dominates, achieving the largest area under the PR curve. SVM has high precision but sacrifices recall on rare conditions.</div>
       </div>
     </div>
@@ -772,12 +772,12 @@ df = ds[<span class="str">"train"</span>].to_pandas()
     <div class="plots-grid plots-grid-2">
       <div class="plot-card">
         <div class="plot-label">Ensemble F1 Heatmap</div>
-        <img src="../results/plots/05_f1_heatmap.png" alt="F1 score heatmap across ensemble models and labels" loading="lazy" />
+        <img src="plots/05_f1_heatmap.png" alt="F1 score heatmap across ensemble models and labels" loading="lazy" />
         <div class="plot-caption">Per-label F1 scores across all ensemble models as a heatmap. XGB_weighted and RF_tuned show consistent performance. XGB_SMOTE achieves near-perfect F1 (0.99) on the validation set — indicating possible overfitting on synthetically augmented data.</div>
       </div>
       <div class="plot-card">
         <div class="plot-label">Ensemble PR Curves</div>
-        <img src="../results/plots/05_pr_curves.png" alt="Precision-Recall curves for ensemble models" loading="lazy" />
+        <img src="plots/05_pr_curves.png" alt="Precision-Recall curves for ensemble models" loading="lazy" />
         <div class="plot-caption">Precision-Recall curves comparing tuned ensemble models across all 6 labels. XGB_weighted maintains the best precision-recall trade-off in real-data settings, with AUC-ROC of 0.866 for Diabetes Risk.</div>
       </div>
     </div>
@@ -916,7 +916,7 @@ df = ds[<span class="str">"train"</span>].to_pandas()
     <div class="plots-grid plots-grid-1">
       <div class="plot-card">
         <div class="plot-label">Macro F1 Bar Chart — Ensemble Models</div>
-        <img src="../results/plots/05_macro_f1_bar.png" alt="Macro F1 bar chart comparing all models" loading="lazy" />
+        <img src="plots/05_macro_f1_bar.png" alt="Macro F1 bar chart comparing all models" loading="lazy" />
         <div class="plot-caption">Summary bar chart of Macro-F1 across all evaluated models. XGB_weighted and RF_tuned show near-identical real-world performance (~0.44), while SMOTE-augmented models inflate metrics through synthetic data coverage.</div>
       </div>
     </div>
