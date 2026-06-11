@@ -1,0 +1,131 @@
+# ══════════════════════════════════════════════
+# Cluster-Adaptive Blood Report Analyzer
+# .gitignore — keeps repo clean for GitHub
+# ══════════════════════════════════════════════
+
+# ─── Raw & Processed Data ───────────────────
+data/
+*.parquet
+*.csv.gz
+*.jsonl
+*.arrow
+*.feather
+*.h5
+*.hdf5
+
+# Allow results/metrics CSVs and JSON (small, important)
+!results/metrics/*.csv
+!results/metrics/*.json
+
+# ─── Trained Models ─────────────────────────
+models/
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.bin
+*.pt
+*.pth
+*.onnx
+*.cbm
+*.xgb
+*.lgbm
+
+# ─── Sensitive / Private ────────────────────
+*.docx
+BCSE209L_Final_Report.docx
+generate_report.js
+BCSE209L_Project_Plan.md
+
+# ─── Node.js ────────────────────────────────
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+
+# ─── Python Environment ─────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ─── Jupyter Notebooks ──────────────────────
+# Keep notebooks but ignore checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ─── IDEs & Editors ─────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── OS Artifacts ───────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# ─── Logs ───────────────────────────────────
+*.log
+logs/
+*.out
+*.err
+
+# ─── Temp / Cache ───────────────────────────
+.cache/
+.pytest_cache/
+.mypy_cache/
+*.tmp
+*.temp
+temp/
+tmp/
+
+# ─── HuggingFace Cache ───────────────────────
+~/.cache/huggingface/
+.huggingface/
+
+# ─── Large result files (keep plots + small metrics) ─
+# Results/plots are allowed (they're PNGs, crucial for showcase)
+# Results/metrics CSVs/JSONs are allowed (small)
+# But exclude any large generated CSVs in results root
+results/*.csv
+results/*.json
+!results/metrics/*.csv
+!results/metrics/*.json
+
+# ─── Site.txt ───────────────────────────────
+"site for data.txt"
+site for data.txt

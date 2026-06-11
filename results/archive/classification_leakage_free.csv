@@ -1,0 +1,7 @@
+label,RF,KNN,SVM,Best,Best_Model
+Anaemia,0.231,0.12,0.002,0.231,RF
+Diabetes_Risk,0.22,0.093,0.001,0.22,RF
+Dyslipidemia,0.242,0.215,0.003,0.242,RF
+Kidney_Risk,0.275,0.184,0.003,0.275,RF
+Liver_Stress,0.251,0.119,0.001,0.251,RF
+Thyroid_Abnormal,0.251,0.095,0.001,0.251,RF

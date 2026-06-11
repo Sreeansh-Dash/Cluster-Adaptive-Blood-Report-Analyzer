@@ -1,0 +1,24 @@
+{
+    "Best overall model": "XGB_weighted",
+    "Best per-label models": {
+        "Anaemia": "XGB_weighted",
+        "Diabetes_Risk": "XGB_weighted",
+        "Dyslipidemia": "XGB_weighted",
+        "Kidney_Risk": "XGB_weighted",
+        "Liver_Stress": "XGB_weighted",
+        "Thyroid_Abnormal": "RF_tuned"
+    },
+    "AUC_ROC": 0.731402593287192,
+    "Macro_F1": 0.4390782689832999,
+    "Hamming_Loss": 0.29219794323049486,
+    "Silhouette Score": 0.0491,
+    "% cluster thresholds diverging from global (>10%)": 70.0,
+    "Labels ordered by F1": [
+        "Anaemia",
+        "Diabetes_Risk",
+        "Dyslipidemia",
+        "Kidney_Risk",
+        "Liver_Stress",
+        "Thyroid_Abnormal"
+    ]
+}

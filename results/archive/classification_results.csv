@@ -1,0 +1,7 @@
+model,hamming_loss,subset_acc,f1_micro,f1_macro
+RF — Global Labels,0.0009,0.9944,0.9988,0.9946
+RF — Cluster-Specific Labels,0.0234,0.8742,0.9085,0.8945
+KNN — Global Labels,0.138,0.4122,0.8046,0.6886
+KNN — Cluster Labels,0.1113,0.5035,0.3856,0.3743
+SVM — Global Labels (15k),0.0489,0.7413,0.9343,0.9073
+SVM — Cluster Labels (15k),0.0978,0.5477,0.4721,0.4405
